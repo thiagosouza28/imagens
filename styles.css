@@ -5,7 +5,7 @@ body {
 }
 
 header {
-  background-color: #263238;
+  background-color: #990100;
   color: #fff;
   padding: 10px 0;
   display: flex;
@@ -30,19 +30,19 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: #b90504;
 }
 
 .banner {
   background-image: url('banner.jpg');
   background-size: cover;
-  color: #fff;
+  color: #b90504;
   text-align: center;
   padding: 100px 20px;
 }
 
 footer {
-  background-color: #263238;
+  background-color: #333333;
   color: #fff;
   text-align: center;
   padding: 10px 0;
