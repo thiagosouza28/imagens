@@ -15,7 +15,7 @@ header {
 
 .logo {
   width: 100px;
-  font-weight: bold;
+
   margin-left: 20px;
 }
 
@@ -42,7 +42,10 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh; /* Defina a altura que desejar para o banner */
+  max-width: 10%
+  height: auto;
+}
+
 }
 
 
