@@ -40,23 +40,23 @@ nav a {
   margin-top: 20px;
 }
 
-
 .banner {
-      position: relative;
-      max-width: 100%;
-      height: 300px;
-      overflow: hidden;
-    }
+  position: relative;
+  max-width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
 
 .banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: none; /* Ocultar as imagens inicialmente */
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+  width: 100%;
+  height: 100%;
+  object-fit: contain; // Alterado de 'cover' para 'contain'
+  display: none; /* Ocultar as imagens inicialmente */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 
 footer {
   position: fixed;
