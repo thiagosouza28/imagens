@@ -42,7 +42,7 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh; /* Defina a altura que desejar para o banner */
+  height: 10vh; /* Defina a altura que desejar para o banner */
 }
 
 
