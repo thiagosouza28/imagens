@@ -6,7 +6,7 @@ body {
 
 header {
   background-color: #990100;
-  color: #f6f6f6;
+  color: #fff;
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #b90504;
+  color: #fff;
 }
 
 .banner {
