@@ -34,8 +34,8 @@ nav a {
 }
 
 .banner {
-  width: 100%;
-  max-width: 800px;
+  width: 30%;
+  max-width: 100px;
   margin: 0 auto;
   padding: 100px 20px;
   text-align: center;
