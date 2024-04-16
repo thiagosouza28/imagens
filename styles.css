@@ -22,7 +22,6 @@ header {
 nav ul {
   display: flex;
   padding: 0;
-  margin: 0;
 }
 
 nav li {
@@ -44,13 +43,11 @@ nav a {
 .banner {
   width: 90%;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .banner img {
   width: 90%;
   height: auto;
-  transition: transform 0.3s;
 }
 
 footer {
@@ -77,17 +74,6 @@ footer {
   nav ul {
     flex-direction: column;
     align-items: center;
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #fc0303;
-    z-index: 1;
-  }
-
-  nav.active ul {
-    display: flex;
   }
 
   nav li {
