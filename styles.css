@@ -87,8 +87,13 @@ footer {
   }
 
   .banner {
-    padding: 80px 10px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%; /* Define a largura máxima para evitar que o banner ultrapasse a tela */
+  height: auto;
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a largura máxima */
+}
 
   footer {
     position: static;
