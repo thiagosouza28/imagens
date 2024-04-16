@@ -34,11 +34,8 @@ nav a {
 }
 
 .banner {
-  background-image: url('banner.jpg');
-  background-size: cover;
   width: 200px;
-  color: #b90504;
-  text-align: center;
+  align-items: center;
   padding: 100px 20px;
 }
 
