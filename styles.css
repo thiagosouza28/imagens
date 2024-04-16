@@ -41,14 +41,14 @@ nav a {
 }
 
 .banner {
-  width: 100%;
-  max-width: 1200px;
+  width: 90%;
+  max-width: 720px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .banner img {
-  width: 100%;
+  width: 90%;
   height: auto;
   transition: transform 0.3s;
 }
