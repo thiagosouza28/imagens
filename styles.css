@@ -56,3 +56,30 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  .logo {
+    margin: 0;
+    text-align: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  .banner {
+    padding: 80px 10px;
+  }
+}
+
