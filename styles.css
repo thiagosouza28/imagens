@@ -53,10 +53,6 @@ nav a {
   transition: transform 0.3s;
 }
 
-.banner img:hover {
-  transform: scale(1.1);
-}
-
 footer {
   position: fixed;
   bottom: 0;
