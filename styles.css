@@ -90,7 +90,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%; /* Define a largura máxima para evitar que o banner ultrapasse a tela */
+  max-width: 30%; /* Define a largura máxima para evitar que o banner ultrapasse a tela */
   height: auto;
   overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a largura máxima */
 }
