@@ -15,7 +15,6 @@ header {
 
 .logo {
   width: 100px;
-
   margin-left: 20px;
 }
 
@@ -42,7 +41,7 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 10%;
+  width: 10%;
   height: auto;
 }
 
