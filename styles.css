@@ -39,12 +39,12 @@ nav a {
 }
 
 .banner {
-  width: 100%;
-  max-width: 400px; /* Defina um valor máximo para o banner */
-  margin: 0 auto;
-  padding: 50px 20px; /* Altere o padding conforme necessário */
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Defina a altura que desejar para o banner */
 }
+
 
 
 footer {
