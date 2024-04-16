@@ -46,12 +46,6 @@ nav a {
   overflow: hidden;
 }
 
-.banner img {
-  width: 90%;
-  height: auto;
-  transition: transform 0.3s;
-}
-
 footer {
   position: fixed;
   bottom: 0;
