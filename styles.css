@@ -35,8 +35,9 @@ nav a {
 
 .banner {
   width: 200px;
-  align-items: center;
+  margin: 0 auto; /* Centraliza horizontalmente */
   padding: 100px 20px;
+  text-align: center; /* Centraliza o texto dentro do elemento */
 }
 
 footer {
