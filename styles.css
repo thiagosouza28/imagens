@@ -13,8 +13,8 @@ header {
   align-items: center;
 }
 
-.logo {
-  font-size: 15px;
+.logo img {
+  font-size: 10px; /* Reduzindo o tamanho da fonte da logo */
   font-weight: bold;
   margin-left: 20px;
 }
