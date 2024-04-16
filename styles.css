@@ -84,17 +84,19 @@ footer {
   }
 
   .banner {
+    display: flex;
+    justify-content: center;
     padding: 20px;
   }
 
   footer {
     position: static;
     position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #fc0303;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fc0303;
+    color: #fff;
+    text-align: center;
+    padding: 10px 5px;
   }
 }
