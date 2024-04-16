@@ -78,10 +78,16 @@ footer {
     flex-direction: column;
     align-items: center;
     display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fc0303;
+    z-index: 1;
   }
 
-  nav active {
-    display: block;
+  nav.active ul {
+    display: flex;
   }
 
   nav li {
