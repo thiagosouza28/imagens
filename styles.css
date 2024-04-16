@@ -33,12 +33,19 @@ nav a {
   color: #fff;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 .banner {
-  width: 30%;
+  width: 100%;
+  max-width: 400px; /* Defina um valor máximo para o banner */
   margin: 0 auto;
   padding: 50px 20px; /* Altere o padding conforme necessário */
   text-align: center;
 }
+
 
 footer {
   position: fixed;
