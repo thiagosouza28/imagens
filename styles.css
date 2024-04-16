@@ -34,10 +34,11 @@ nav a {
 }
 
 .banner {
-  width: 200px;
-  margin: 0 auto; /* Centraliza horizontalmente */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 100px 20px;
-  text-align: center; /* Centraliza o texto dentro do elemento */
+  text-align: center;
 }
 
 footer {
@@ -63,7 +64,7 @@ footer {
   }
 
   .logo {
-    margin: 0;
+    margin: 10px 0;
     text-align: center;
   }
 
@@ -80,5 +81,8 @@ footer {
   .banner {
     padding: 80px 10px;
   }
-}
 
+  footer {
+    position: static;
+  }
+}
