@@ -30,21 +30,5 @@
     <p>&copy; 2024 Gráfica e Comunicação Visual - Todos os direitos reservados</p>
   </div>
 </footer>
-
-<script>
-  const banner = document.querySelector('.banner');
-  const images = banner.querySelectorAll('img');
-  let currentIndex = 0;
-
-  function showNextImage() {
-    images[currentIndex].style.display = 'none';
-    
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].style.display = 'block';
-  }
-
-  setInterval(showNextImage, 3000); // Troca a imagem a cada 3 segundos
-</script>
-
 </body>
 </html>
