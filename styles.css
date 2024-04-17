@@ -40,11 +40,22 @@ nav a {
   margin-top: 20px;
 }
 
-.banner {
+.banner-container {
+  display: flex; /* Utiliza flexbox para alinhar no centro horizontal */
+  justify-content: center; /* Alinha no centro horizontal */
   position: relative;
   max-width: 100%;
   height: 300px;
   overflow: hidden;
+}
+
+.banner {
+  width: 90%;
+  object-fit: contain;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .banner img {
