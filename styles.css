@@ -81,8 +81,10 @@ footer {
   }
 
   .banner img {
-    width: 50%;
-    object-fit: cover; /* Mantém a imagem proporcionalmente */
+    width: 100%;
+    object-fit: cover;
+    padding: 15px;
+    margin: 20px;
   }
 
   footer {
