@@ -48,10 +48,9 @@ nav a {
 }
 
 .banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; // Alterado de 'cover' para 'contain'
-  display: none; /* Ocultar as imagens inicialmente */
+  width: 90%;
+  object-fit: contain;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -61,7 +60,7 @@ nav a {
 footer {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 90%;
   background-color: #fc0303;
   color: #fff;
   text-align: center;
@@ -90,6 +89,7 @@ footer {
 
   .banner {
     display: flex;
+    width: 90%;
     justify-content: center;
     padding: 20px;
   }
