@@ -14,8 +14,6 @@ header {
   align-items: center;
   width: 100%; /* Ocupa a largura total */
   position: fixed; /* Mantém o header fixo na tela */
-  top: 0; /* Posiciona o header no topo */
-  z-index: 999; /* Garante que o header fique acima dos outros elementos */
 }
 
 
