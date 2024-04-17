@@ -46,7 +46,7 @@ nav a {
   width: 90%;
   height: 90%;
   object-fit: cover;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
 }
 
 footer {
@@ -57,6 +57,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
+  font-size: 14px; /* Aumenta o tamanho da fonte */
 }
 
 @media only screen and (max-width: 768px) {
@@ -65,7 +66,7 @@ footer {
   }
 
   .logo {
-    margin: 10px 0;
+    margin: 10px 0; /* Removido margin-left */
     text-align: center;
   }
 
@@ -80,6 +81,7 @@ footer {
 
   .banner {
     height: 200px; /* Ajuste de altura para telas menores */
+    margin: 20px 0; /* Adiciona margem ao redor do banner */
   }
 
   .banner img {
