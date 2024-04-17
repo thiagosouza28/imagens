@@ -63,7 +63,6 @@ footer {
 
 @media only screen and (max-width: 768px) {
   header {
-    flex-direction: column;
     width: 100%; /* Ocupa a largura total */
   }
 
