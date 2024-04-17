@@ -81,24 +81,15 @@ footer {
     margin: 10px 0;
   }
 
-.banner {
-  position: relative;
-  max-width: 100%;
-  height: 300px;
-  margin: 0 auto; /* Centraliza horizontalmente */
-  overflow: hidden;
-}
+  .banner {
+    height: 200px; /* Ajuste na altura do banner para telas menores */
+  }
 
-.banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  padding: 10px;
-}
+  .banner img {
+    padding: 5px; /* Ajuste no padding da imagem do banner */
+  }
 
   footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    position: static; /* Alterado para não ser mais fixed */
   }
 }
