@@ -12,6 +12,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%; /* Ocupa a largura total */
 }
 
 .logo {
@@ -63,6 +64,7 @@ footer {
 @media only screen and (max-width: 768px) {
   header {
     flex-direction: column;
+    width: 100%; /* Ocupa a largura total */
   }
 
   .logo {
@@ -91,7 +93,8 @@ footer {
   }
 
   footer {
-    position: static;
+    position: fixed;
+    bottom: 0;
     width: 100%;
     padding: 15px;
   }
