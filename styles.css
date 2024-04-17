@@ -38,7 +38,6 @@ nav a {
   position: relative;
   max-width: 100%;
   height: 300px;
-  margin: 0 auto; /* Centraliza horizontalmente */
   overflow: hidden;
 }
 
