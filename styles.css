@@ -3,17 +3,15 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
-  overflow-x: hidden;
 }
 
 header {
   background-color: #fc0303;
   color: #fff;
-  padding: 10px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Ocupa a largura total */
 }
 
 .logo {
@@ -40,14 +38,15 @@ nav a {
   position: relative;
   max-width: 100%;
   height: 300px;
+  margin: 0 auto; /* Centraliza horizontalmente */
   overflow: hidden;
 }
 
 .banner img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
 }
 
 footer {
@@ -58,14 +57,12 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  font-size: 14px;
 }
 
 @media only screen and (max-width: 768px) {
   header {
+    padding: 15px 10px;
     flex-direction: column;
-    width: 100%;
-    padding: 10px;
   }
 
   .logo {
@@ -76,7 +73,6 @@ footer {
   nav ul {
     flex-direction: column;
     align-items: center;
-    padding: 0;
   }
 
   nav li {
@@ -84,19 +80,18 @@ footer {
   }
 
   .banner {
-    margin: 0;
-    height: 200px;
-    padding: 0;
+    height: 200px; /* Ajuste de altura para telas menores */
   }
 
   .banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding: 0;
+    width: 90%;
+    height: 90%;
+    object-fit: cover; /* Mantém a imagem proporcionalmente */
   }
 
   footer {
-    margin: 10px 0;
+    position: static;
+    width: 100%;
+    padding: 15px;
   }
 }
