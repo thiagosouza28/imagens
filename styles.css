@@ -44,6 +44,7 @@ nav a {
 .banner img {
   width: 50%;
   object-fit: cover;
+  align-items: center;
 }
 
 footer {
@@ -78,6 +79,7 @@ footer {
 
   .banner {
     width: 100px; /* Ajuste de altura para telas menores */
+    align-items: center;
   }
 
   .banner img {
