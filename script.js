@@ -10,7 +10,14 @@ function loadImagesFromDirectory() {
     xhr.open('GET', directoryUrl, true);
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
-            images = xhr.responseText.split('\n').filter(url => url.trim() !== ''); // Separando as URLs por quebra de linha
+            // Converter a resposta em um documento HTML
+            const parser = new DOMParser();
+            const htmlDocument = parser.parseFromString(xhr.responseText, 'text/html');
+
+            // Extrair as URLs das imagens
+            const imgElements = htmlDocument.querySelectorAll('a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"]');
+            images = Array.from(imgElements).map(element => directoryUrl + element.getAttribute('href'));
+
             console.log('URLs das imagens carregadas:', images);
             startImageSlideshow();
         } else {
