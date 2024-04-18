@@ -79,16 +79,19 @@ footer {
 
   .banner {
     width: 100px; /* Ajuste de altura para telas menores */
-    align-items: center;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
     text-align: center;
-  }
+}
 
-  .banner img {
-    width: 100%;
+.banner img {
+    max-width: 100%; /* Para garantir que a imagem não ultrapasse a largura do banner */
+    max-height: 100%; /* Para garantir que a imagem não ultrapasse a altura do banner */
     object-fit: cover;
     padding: 15px;
     margin: 20px;
-  }
+}
 
   footer {
     position: fixed;
