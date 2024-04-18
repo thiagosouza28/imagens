@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #fc0303;
+  background-image: radial-gradient(circle at 50% -20.71%, #cd2ef0 0, #e400dc 5%, #f600c6 10%, #ff00af 15%, #ff0098 20%, #ff0081 25%, #ff006a 30%, #ff0053 35%, #ff003d 40%, #ff0025 45%, #ff0000 50%, #f43000 55%, #e74700 60%, #d85700 65%, #c86400 70%, #b77000 75%, #a47900 80%, #908100 85%, #7a8700 90%, #618d00 95%, #439100 100%);
   color: #fff;
   padding: 10px 20px;
   display: flex;
