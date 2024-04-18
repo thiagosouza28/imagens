@@ -1,4 +1,4 @@
-const bannerImages = ['https://moura-grafica.vercel.app/img/moura1.png']; // Adicione mais imagens conforme necessário
+const bannerImages = ['https://moura-grafica.vercel.app/img/moura1.png', 'https://moura-grafica.vercel.app/img/moura2.png']; // Adicione mais imagens conforme necessário
 let currentImageIndex = 0;
 const bannerElement = document.getElementById('banner-img');
 
