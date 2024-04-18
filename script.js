@@ -7,4 +7,4 @@ function changeImage() {
   currentImageIndex = (currentImageIndex + 1) % bannerImages.length;
 }
 
-setInterval(changeImage, 3000); // Troca de imagem a cada 3 segundos
+setInterval(changeImage, 2000); // Troca de imagem a cada 3 segundos
