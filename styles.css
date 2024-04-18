@@ -82,20 +82,20 @@ footer {
   }
 
   .banner {
-    width: 100px; /* Ajuste de altura para telas menores */
+    height: 200px; /* Ajuste de altura para telas menores */
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     text-align: center;
-}
+  }
 
-.banner img {
-    max-width: 100%; /* Para garantir que a imagem não ultrapasse a largura do banner */
-    max-height: 100%; /* Para garantir que a imagem não ultrapasse a altura do banner */
-    object-fit: cover;
+  .banner img {
+    width: 100%; /* Ajustei para ocupar toda a largura do banner */
+    height: 100%; /* Ajustei para ocupar toda a altura do banner */
+    object-fit: contain; /* Ajusta para exibir toda a imagem sem cortes */
     padding: 15px;
     margin: 0; /* Remova a margem para garantir a centralização correta */
-}
+  }
 
   footer {
     position: fixed;
