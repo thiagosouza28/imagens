@@ -13,10 +13,10 @@ async function displayImagesFromDirectory() {
         const html = await response.text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
-        
-        imageUrls = Array.from(doc.querySelectorAll('a')).map(link => {
-            return link.getAttribute('href');
-        }).filter(href => href.endsWith('.png') || href.endsWith('.jpg') || href.endsWith('.jpeg'));
+
+        const links = Array.from(doc.querySelectorAll('a'));
+        imageUrls = links.map(link => link.href)
+                         .filter(href => href.endsWith('.png') || href.endsWith('.jpg') || href.endsWith('.jpeg'));
     } catch (error) {
         console.error('Erro ao carregar imagens:', error);
     }
@@ -24,15 +24,15 @@ async function displayImagesFromDirectory() {
 
 // Função para exibir a próxima imagem a cada 3 segundos
 function displayNextImage() {
-    const imageUrl = directoryUrl + imageUrls[currentIndex];
-    
+    const imageUrl = imageUrls[currentIndex];
+
     const imgElement = document.createElement('img');
     imgElement.src = imageUrl;
     imgElement.alt = 'Banner';
-    
+
     bannerSection.innerHTML = '';
     bannerSection.appendChild(imgElement);
-    
+
     currentIndex = (currentIndex + 1) % imageUrls.length;
 }
 
@@ -40,7 +40,7 @@ function displayNextImage() {
 async function startImageRotation() {
     await displayImagesFromDirectory();
     displayNextImage();
-    
+
     setInterval(() => {
         displayNextImage();
     }, 3000); // Atualiza a imagem a cada 3 segundos
