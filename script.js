@@ -1,5 +1,5 @@
 const bannerSection = document.querySelector('.banner');
-const directoryUrl = 'http://moura-grafica.vercel.app/img/'; // URL do diretório das imagens
+const directoryUrl = 'https://moura-grafica.vercel.app/'; // URL do diretório das imagens
 let images = []; // Array para armazenar as URLs das imagens
 let currentIndex = 0; // Índice da imagem atual
 
@@ -10,7 +10,8 @@ function loadImagesFromDirectory() {
     xhr.open('GET', directoryUrl, true);
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
-            images = xhr.response;
+            images = xhr.response.split('\n').filter(url => url.trim() !== ''); // Separando as URLs por quebra de linha
+            console.log('URLs das imagens carregadas:', images);
             startImageSlideshow();
         } else {
             console.error('Falha ao carregar imagens do diretório.');
@@ -24,7 +25,7 @@ function loadImagesFromDirectory() {
 function startImageSlideshow() {
     setInterval(() => {
         const imgElement = document.createElement('img');
-        imgElement.src = directoryUrl + images[currentIndex];
+        imgElement.src = images[currentIndex]; // Alteração para acessar diretamente o array de URLs das imagens
         imgElement.alt = 'Banner';
         bannerSection.innerHTML = '';
         bannerSection.appendChild(imgElement);
