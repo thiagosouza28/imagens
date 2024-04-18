@@ -1,27 +1,50 @@
-
 const bannerSection = document.querySelector('.banner');
 
-// Lista de URLs das imagens
-const images = [
-    'https://moura-grafica.vercel.app/img/moura1.png',
-    'https://moura-grafica.vercel.app/img/moura2.png',
-    'https://moura-grafica.vercel.app/img/moura3.png'
-];
+// URL do diretório onde as imagens estão localizadas
+const directoryUrl = 'https://moura-grafica.vercel.app/img/';
 
-let index = 0;
+let currentIndex = 0;
+let imageUrls = [];
 
-function displayImage() {
+// Função para carregar e exibir todas as imagens do diretório
+async function displayImagesFromDirectory() {
+    try {
+        const response = await fetch(directoryUrl);
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        
+        imageUrls = Array.from(doc.querySelectorAll('a')).map(link => {
+            return link.getAttribute('href');
+        }).filter(href => href.endsWith('.png') || href.endsWith('.jpg') || href.endsWith('.jpeg'));
+    } catch (error) {
+        console.error('Erro ao carregar imagens:', error);
+    }
+}
+
+// Função para exibir a próxima imagem a cada 3 segundos
+function displayNextImage() {
+    const imageUrl = directoryUrl + imageUrls[currentIndex];
+    
     const imgElement = document.createElement('img');
-    imgElement.src = images[index];
+    imgElement.src = imageUrl;
     imgElement.alt = 'Banner';
+    
     bannerSection.innerHTML = '';
     bannerSection.appendChild(imgElement);
     
-    index = (index + 1) % images.length;
+    currentIndex = (currentIndex + 1) % imageUrls.length;
 }
 
-// Exibir a primeira imagem imediatamente
-displayImage();
+// Função inicial para carregar as imagens do diretório e iniciar a exibição
+async function startImageRotation() {
+    await displayImagesFromDirectory();
+    displayNextImage();
+    
+    setInterval(() => {
+        displayNextImage();
+    }, 3000); // Atualiza a imagem a cada 3 segundos
+}
 
-// Exibir as imagens a cada 3 segundos
-setInterval(displayImage, 3000);
+// Chamar a função para iniciar a rotação das imagens
+startImageRotation();
