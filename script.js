@@ -1,16 +1,20 @@
 window.onload = function() {
-  const imagem = document.getElementById('imagem');
+  const imagensContainer = document.getElementById('imagens');
 
   fetch('https://moura-grafica.vercel.app/img')
     .then(response => {
       if (response.ok) {
-        return response.blob();
+        return response.json();
       }
-      throw new Error('Erro ao carregar a imagem');
+      throw new Error('Erro ao carregar as imagens');
     })
-    .then(blob => {
-      const imgUrl = URL.createObjectURL(blob);
-      imagem.src = imgUrl;
+    .then(data => {
+      data.forEach(imagemUrl => {
+        const img = document.createElement('img');
+        img.src = imagemUrl;
+        img.style.marginRight = '10px';
+        imagensContainer.appendChild(img);
+      });
     })
     .catch(error => {
       console.error(error);
