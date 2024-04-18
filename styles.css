@@ -48,6 +48,7 @@ nav a {
   width: 100%; /* Ajustei para ocupar toda a largura do banner */
   height: 100%; /* Ajustei para ocupar toda a altura do banner */
   object-fit: contain; /* Ajusta para exibir toda a imagem sem cortes */
+  padding: 15px;
 }
 
 
