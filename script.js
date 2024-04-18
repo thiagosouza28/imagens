@@ -1,10 +1,32 @@
-const bannerImages = ['https://moura-grafica.vercel.app/img/moura1.png', 'https://moura-grafica.vercel.app/img/Mochup Banner 3.jpg', 'https://moura-grafica.vercel.app/img/moura2.png', 'https://moura-grafica.vercel.app/img/LONA.png']; // Adicione mais imagens conforme necessário
-let currentImageIndex = 0;
-const bannerElement = document.getElementById('banner-img');
 
-function changeImage() {
-  bannerElement.src = bannerImages[currentImageIndex];
-  currentImageIndex = (currentImageIndex + 1) % bannerImages.length;
+const imageDirectory = 'https://moura-grafica.vercel.app/img/'; // Diretório onde estão as imagens
+const bannerElement = document.getElementById('banner-img');
+let currentImageIndex = 0;
+let bannerImages = [];
+
+// Função para carregar as imagens do diretório
+function loadImages() {
+    fetch(imageDirectory)
+        .then(response => response.text())
+        .then(text => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(text, 'text/html');
+            const images = htmlDoc.getElementsByTagName('a');
+
+            for (let image of images) {
+                if (image.href.endsWith('.png') || image.href.endsWith('.jpg')) {
+                    bannerImages.push(imageDirectory + image.getAttribute('href'));
+                }
+            }
+
+            setInterval(changeImage, 2000); // Troca de imagem a cada 2 segundos
+        });
 }
 
-setInterval(changeImage, 2000); // Troca de imagem a cada 3 segundos
+// Função para trocar a imagem
+function changeImage() {
+    bannerElement.src = bannerImages[currentImageIndex];
+    currentImageIndex = (currentImageIndex + 1) % bannerImages.length;
+}
+
+loadImages(); // Carrega as imagens ao carregar a página
