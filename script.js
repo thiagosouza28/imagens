@@ -1,50 +1,37 @@
 const bannerSection = document.querySelector('.banner');
+const directoryUrl = 'http://moura-grafica.vercel.app/img/'; // URL do diretório das imagens
+let images = []; // Array para armazenar as URLs das imagens
+let currentIndex = 0; // Índice da imagem atual
 
-// URL do diretório onde as imagens estão localizadas
-const directoryUrl = 'https://moura-grafica.vercel.app/img/';
+// Função para carregar a lista de imagens do diretório
+function loadImagesFromDirectory() {
+    const xhr = new XMLHttpRequest();
 
-let currentIndex = 0;
-let imageUrls = [];
+    xhr.open('GET', directoryUrl, true);
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            images = xhr.response;
+            startImageSlideshow();
+        } else {
+            console.error('Falha ao carregar imagens do diretório.');
+        }
+    };
 
-// Função para carregar e exibir todas as imagens do diretório
-async function displayImagesFromDirectory() {
-    try {
-        const response = await fetch(directoryUrl);
-        const html = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-
-        const links = Array.from(doc.querySelectorAll('a'));
-        imageUrls = links.map(link => link.href)
-                         .filter(href => href.endsWith('.png') || href.endsWith('.jpg') || href.endsWith('.jpeg'));
-    } catch (error) {
-        console.error('Erro ao carregar imagens:', error);
-    }
+    xhr.send();
 }
 
-// Função para exibir a próxima imagem a cada 3 segundos
-function displayNextImage() {
-    const imageUrl = imageUrls[currentIndex];
-
-    const imgElement = document.createElement('img');
-    imgElement.src = imageUrl;
-    imgElement.alt = 'Banner';
-
-    bannerSection.innerHTML = '';
-    bannerSection.appendChild(imgElement);
-
-    currentIndex = (currentIndex + 1) % imageUrls.length;
-}
-
-// Função inicial para carregar as imagens do diretório e iniciar a exibição
-async function startImageRotation() {
-    await displayImagesFromDirectory();
-    displayNextImage();
-
+// Função para exibir as imagens sequencialmente a cada 3 segundos
+function startImageSlideshow() {
     setInterval(() => {
-        displayNextImage();
-    }, 3000); // Atualiza a imagem a cada 3 segundos
+        const imgElement = document.createElement('img');
+        imgElement.src = directoryUrl + images[currentIndex];
+        imgElement.alt = 'Banner';
+        bannerSection.innerHTML = '';
+        bannerSection.appendChild(imgElement);
+
+        currentIndex = (currentIndex + 1) % images.length;
+    }, 3000);
 }
 
-// Chamar a função para iniciar a rotação das imagens
-startImageRotation();
+// Chamar a função para carregar as imagens do diretório
+loadImagesFromDirectory();
