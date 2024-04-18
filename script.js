@@ -1,10 +1,8 @@
 
 const imageDirectory = 'https://moura-grafica.vercel.app/img/'; // Diretório onde estão as imagens
-const bannerElement = document.getElementById('banner-img');
-let currentImageIndex = 0;
-let bannerImages = [];
+const galleryElement = document.getElementById('gallery');
 
-// Função para carregar as imagens do diretório
+// Função para carregar e exibir as imagens do diretório
 function loadImages() {
     fetch(imageDirectory)
         .then(response => response.text())
@@ -15,18 +13,13 @@ function loadImages() {
 
             for (let image of images) {
                 if (image.href.endsWith('.png') || image.href.endsWith('.jpg')) {
-                    bannerImages.push(imageDirectory + image.getAttribute('href'));
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imageDirectory + image.getAttribute('href');
+                    imgElement.style.maxWidth = '100%';
+                    galleryElement.appendChild(imgElement);
                 }
             }
-
-            setInterval(changeImage, 2000); // Troca de imagem a cada 2 segundos
         });
 }
 
-// Função para trocar a imagem
-function changeImage() {
-    bannerElement.src = bannerImages[currentImageIndex];
-    currentImageIndex = (currentImageIndex + 1) % bannerImages.length;
-}
-
-loadImages(); // Carrega as imagens ao carregar a página
+loadImages(); // Carrega e exibe as imagens ao carregar a página
