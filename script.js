@@ -10,7 +10,6 @@ function loadImagesFromDirectory() {
     xhr.open('GET', directoryUrl, true);
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
-            // Converter a resposta em um documento HTML
             const parser = new DOMParser();
             const htmlDocument = parser.parseFromString(xhr.responseText, 'text/html');
 
@@ -28,17 +27,24 @@ function loadImagesFromDirectory() {
     xhr.send();
 }
 
-// Função para exibir as imagens sequencialmente a cada 3 segundos
-function startImageSlideshow() {
-    setInterval(() => {
-        const imgElement = document.createElement('img');
-        imgElement.src = images[currentIndex]; // Acessar diretamente o array de URLs das imagens
-        imgElement.alt = 'Banner';
-        bannerSection.innerHTML = ''; // Limpar o conteúdo anterior
-        bannerSection.appendChild(imgElement);
+// Função para exibir a próxima imagem na seção de banner
+function displayNextImage() {
+    const imgElement = document.createElement('img');
+    imgElement.src = images[currentIndex];
+    imgElement.alt = 'Banner';
+    bannerSection.innerHTML = ''; // Limpar o conteúdo anterior
+    bannerSection.appendChild(imgElement);
 
-        currentIndex = (currentIndex + 1) % images.length;
-    }, 3000);
+    currentIndex = (currentIndex + 1) % images.length;
+}
+
+// Função para iniciar o slideshow de imagens
+function startImageSlideshow() {
+    // Exibir a primeira imagem imediatamente
+    displayNextImage();
+
+    // Configurar intervalo para exibir imagens subsequentes a cada 3 segundos
+    setInterval(displayNextImage, 3000);
 }
 
 // Chamar a função para carregar as imagens do diretório
