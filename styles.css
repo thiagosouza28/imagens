@@ -80,6 +80,7 @@ footer {
   .banner {
     width: 100px; /* Ajuste de altura para telas menores */
     align-items: center;
+    text-align: center;
   }
 
   .banner img {
