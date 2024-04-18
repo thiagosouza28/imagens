@@ -1,5 +1,5 @@
 
-<script>
+
 const imageDirectory = 'https://moura-grafica.vercel.app/img/'; // Diretório onde estão as imagens
 const galleryElement = document.getElementById('gallery');
 
