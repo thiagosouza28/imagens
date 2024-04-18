@@ -10,7 +10,7 @@ function loadImagesFromDirectory() {
     xhr.open('GET', directoryUrl, true);
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
-            images = xhr.response.split('\n').filter(url => url.trim() !== ''); // Separando as URLs por quebra de linha
+            images = xhr.responseText.split('\n').filter(url => url.trim() !== ''); // Separando as URLs por quebra de linha
             console.log('URLs das imagens carregadas:', images);
             startImageSlideshow();
         } else {
@@ -25,9 +25,9 @@ function loadImagesFromDirectory() {
 function startImageSlideshow() {
     setInterval(() => {
         const imgElement = document.createElement('img');
-        imgElement.src = images[currentIndex]; // Alteração para acessar diretamente o array de URLs das imagens
+        imgElement.src = images[currentIndex]; // Acessar diretamente o array de URLs das imagens
         imgElement.alt = 'Banner';
-        bannerSection.innerHTML = '';
+        bannerSection.innerHTML = ''; // Limpar o conteúdo anterior
         bannerSection.appendChild(imgElement);
 
         currentIndex = (currentIndex + 1) % images.length;
