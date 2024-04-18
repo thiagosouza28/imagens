@@ -36,7 +36,7 @@ nav a {
 
 .banner {
   position: relative;
-  height: 300px;
+  height: 400px; /* Aumentei a altura do banner */
   margin: 30px auto; /* Centraliza o banner na tela */
   overflow: hidden;
   display: flex;
@@ -45,8 +45,9 @@ nav a {
 }
 
 .banner img {
-  width: 50%; /* Ajusta o tamanho da imagem como desejado */
-  object-fit: cover;
+  width: 100%; /* Ajustei para ocupar toda a largura do banner */
+  height: 100%; /* Ajustei para ocupar toda a altura do banner */
+  object-fit: contain; /* Ajusta para exibir toda a imagem sem cortes */
 }
 
 
