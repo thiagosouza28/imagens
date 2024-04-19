@@ -5,8 +5,8 @@ let currentIndex = 0; // Índice da imagem atual
 
 // Função para carregar a lista de imagens do diretório
 function loadImagesFromDirectory() {
-  // Loop para carregar todas as imagens de 01.png a 99.png
-  for (let i = 1; i <= 99; i++) {
+  // Loop para carregar todas as imagens de 99.png a 01.png
+  for (let i = 99; i >= 1; i--) {
     // Formatar o número com zero à esquerda se necessário
     const paddedNumber = String(i).padStart(2, "0");
     // Construir a URL da imagem
@@ -18,23 +18,11 @@ function loadImagesFromDirectory() {
         images.push(imageUrl);
       }
       // Se chegarmos ao final do loop e não houver mais imagens, iniciar o slideshow
-      if (i === 99) {
+      if (i === 1) {
         startImageSlideshow();
       }
     });
   }
-}
-
-// Função para verificar se uma imagem existe
-function imageExists(url, callback) {
-  const img = new Image();
-  img.onload = function () {
-    callback(true);
-  };
-  img.onerror = function () {
-    callback(false);
-  };
-  img.src = url;
 }
 
 // Função para exibir a próxima imagem na seção de banner
@@ -50,7 +38,8 @@ function displayNextImage() {
 
 // Função para iniciar o slideshow de imagens
 function startImageSlideshow() {
-  // Exibir a primeira imagem imediatamente
+  // Exibir a última imagem imediatamente
+  currentIndex = images.length - 1;
   displayNextImage();
 
   // Configurar intervalo para exibir imagens subsequentes a cada 3 segundos
@@ -63,15 +52,14 @@ function startImageSlideshow() {
 // Chamar a função para carregar as imagens do diretório
 loadImagesFromDirectory();
 
-// Adicionar evento de clique ao botão do menu
-document.querySelector(".menu-toggle").addEventListener("click", function () {
-  // Alternar a classe 'open' no menu para exibi-lo ou ocultá-lo
-  document.querySelector(".nav-links").classList.toggle("open");
-
-  // Calcular a altura necessária para o contêiner do menu-content
-  const navLinksHeight = document.querySelector(".nav-links").offsetHeight;
-  document.querySelector(".menu-content").style.height = navLinksHeight + "px";
-
-  // Alternar a classe 'open' no menu-content para exibi-lo ou ocultá-lo
-  document.querySelector(".menu-content").classList.toggle("open");
-});
+// Função para verificar se uma imagem existe
+function imageExists(url, callback) {
+  const img = new Image();
+  img.onload = function () {
+    callback(true);
+  };
+  img.onerror = function () {
+    callback(false);
+  };
+  img.src = url;
+}
