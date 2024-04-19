@@ -55,12 +55,7 @@ function startImageSlideshow() {
 
   // Configurar intervalo para exibir imagens subsequentes a cada 3 segundos
   setInterval(function () {
-    // Se chegarmos ao fim das imagens, reiniciar a partir da primeira
-    if (currentIndex === images.length - 1) {
-      currentIndex = 0;
-    } else {
-      currentIndex++;
-    }
+    // Exibir a próxima imagem
     displayNextImage();
   }, 3000);
 }
