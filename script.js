@@ -62,3 +62,9 @@ function startImageSlideshow() {
 
 // Chamar a função para carregar as imagens do diretório
 loadImagesFromDirectory();
+
+// Adicionar evento de clique ao botão do menu
+document.querySelector(".menu-toggle").addEventListener("click", function () {
+  // Alternar a classe 'open' no menu para exibi-lo ou ocultá-lo
+  document.querySelector(".nav-links").classList.toggle("open");
+});

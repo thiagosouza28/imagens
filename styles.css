@@ -36,18 +36,18 @@ nav a {
 
 .banner {
   position: relative;
-  height: 400px; /* Aumentei a altura do banner */
-  margin: 30px auto; /* Centraliza o banner na tela */
+  height: 400px;
+  margin: 30px auto;
   overflow: hidden;
   display: flex;
-  justify-content: center; /* Centraliza a imagem horizontalmente */
-  align-items: center; /* Centraliza a imagem verticalmente */
+  justify-content: center;
+  align-items: center;
 }
 
 .banner img {
-  width: 100%; /* Ajustei para ocupar toda a largura do banner */
-  height: 100%; /* Ajustei para ocupar toda a altura do banner */
-  object-fit: contain; /* Ajusta para exibir toda a imagem sem cortes */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   padding: 15px;
 }
 
@@ -62,7 +62,7 @@ footer {
 }
 
 .mobile-text {
-  display: none; /* Inicialmente, oculta o texto para telas menores */
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -81,18 +81,18 @@ footer {
   }
 
   .banner {
-    height: 200px; /* Ajuste de altura para telas menores */
+    height: 200px;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
     text-align: center;
   }
 
   .banner img {
-    width: 100%; /* Ajustei para ocupar toda a largura do banner */
-    height: 100%; /* Ajustei para ocupar toda a altura do banner */
-    object-fit: contain; /* Ajusta para exibir toda a imagem sem cortes */
-    margin: 0; /* Remova a margem para garantir a centralização correta */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0;
   }
 
   footer {
@@ -103,10 +103,48 @@ footer {
   }
 
   .desktop-text {
-    display: none; /* Oculta o texto para telas maiores */
+    display: none;
   }
 
   .mobile-text {
-    display: inline; /* Exibe o texto para telas menores */
+    display: inline;
+  }
+
+  /* Estilos para o menu responsivo */
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Coloca o menu abaixo do botão */
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1; /* Certifica-se de que o menu está na frente de outros elementos */
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
   }
 }
