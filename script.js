@@ -11,12 +11,30 @@ function loadImagesFromDirectory() {
     const paddedNumber = String(i).padStart(2, "0");
     // Construir a URL da imagem
     const imageUrl = directoryUrl + paddedNumber + ".png";
-    // Adicionar a URL da imagem ao array
-    images.push(imageUrl);
+    // Verificar se a imagem existe
+    imageExists(imageUrl, function (exists) {
+      if (exists) {
+        // Adicionar a URL da imagem ao array se ela existir
+        images.push(imageUrl);
+      }
+      // Se chegarmos ao final do loop e não houver mais imagens, iniciar o slideshow
+      if (i === 99) {
+        startImageSlideshow();
+      }
+    });
   }
+}
 
-  console.log("URLs das imagens carregadas:", images);
-  startImageSlideshow();
+// Função para verificar se uma imagem existe
+function imageExists(url, callback) {
+  const img = new Image();
+  img.onload = function () {
+    callback(true);
+  };
+  img.onerror = function () {
+    callback(false);
+  };
+  img.src = url;
 }
 
 // Função para exibir a próxima imagem na seção de banner
@@ -36,7 +54,15 @@ function startImageSlideshow() {
   displayNextImage();
 
   // Configurar intervalo para exibir imagens subsequentes a cada 3 segundos
-  setInterval(displayNextImage, 3000);
+  setInterval(function () {
+    // Se chegarmos ao fim das imagens, reiniciar a partir da primeira
+    if (currentIndex === images.length - 1) {
+      currentIndex = 0;
+    } else {
+      currentIndex++;
+    }
+    displayNextImage();
+  }, 3000);
 }
 
 // Chamar a função para carregar as imagens do diretório
