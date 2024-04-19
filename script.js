@@ -67,4 +67,11 @@ loadImagesFromDirectory();
 document.querySelector(".menu-toggle").addEventListener("click", function () {
   // Alternar a classe 'open' no menu para exibi-lo ou ocultá-lo
   document.querySelector(".nav-links").classList.toggle("open");
+
+  // Calcular a altura necessária para o contêiner do menu-content
+  const navLinksHeight = document.querySelector(".nav-links").offsetHeight;
+  document.querySelector(".menu-content").style.height = navLinksHeight + "px";
+
+  // Alternar a classe 'open' no menu-content para exibi-lo ou ocultá-lo
+  document.querySelector(".menu-content").classList.toggle("open");
 });
