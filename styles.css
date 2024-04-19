@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #8B0000;
+  background-color: #8b0000;
   color: #fff;
   padding: 10px 20px;
   display: flex;
@@ -51,35 +51,33 @@ nav a {
   padding: 15px;
 }
 
-
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #8B0000;
+  background-color: #8b0000;
   color: #fff;
   text-align: center;
   padding: 5px 0;
 }
 
+.mobile-text {
+  display: none; /* Inicialmente, oculta o texto para telas menores */
+}
+
 @media only screen and (max-width: 768px) {
   header {
-    padding: 15px 10px;
+    padding: 10px 10px;
     flex-direction: column;
   }
 
   .logo {
-    margin: 10px 0;
+    margin: 5px 0;
     text-align: center;
   }
 
   nav ul {
-    flex-direction: column;
     align-items: center;
-  }
-
-  nav li {
-    margin: 10px 0;
   }
 
   .banner {
@@ -94,14 +92,21 @@ footer {
     width: 100%; /* Ajustei para ocupar toda a largura do banner */
     height: 100%; /* Ajustei para ocupar toda a altura do banner */
     object-fit: contain; /* Ajusta para exibir toda a imagem sem cortes */
-    padding: 15px;
     margin: 0; /* Remova a margem para garantir a centralização correta */
   }
 
   footer {
     position: fixed;
     width: 100%;
-    padding: 15px 10px;
+    padding: 5px;
     text-align: center;
+  }
+
+  .desktop-text {
+    display: none; /* Oculta o texto para telas maiores */
+  }
+
+  .mobile-text {
+    display: inline; /* Exibe o texto para telas menores */
   }
 }
