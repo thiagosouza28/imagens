@@ -1,12 +1,12 @@
-/* Estilos globais */
+/* Estilos Globais */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
 }
 
-/* Estilos do cabeçalho */
+/* Estilos do Cabeçalho */
 header {
   background-color: #8b0000;
   color: #fff;
@@ -21,7 +21,6 @@ header {
   margin-left: 20px;
 }
 
-/* Estilos da navegação */
 nav ul {
   display: flex;
   margin-right: 20px;
@@ -37,7 +36,7 @@ nav a {
   padding: 10px;
 }
 
-/* Estilos do banner */
+/* Estilos do Banner */
 .banner {
   position: relative;
   height: 400px;
@@ -55,7 +54,7 @@ nav a {
   padding: 15px;
 }
 
-/* Estilos do rodapé */
+/* Estilos do Rodapé */
 footer {
   position: fixed;
   bottom: 0;
@@ -66,18 +65,13 @@ footer {
   padding: 5px 0;
 }
 
-.mobile-text {
-  display: none;
-}
-
-/* Estilos para telas menores */
+/* Estilos para Telas Menores */
 @media only screen and (max-width: 768px) {
   header {
     flex-direction: column;
-    width: 100%; /* Ajusta a largura para ocupar 100% da largura da tela */
-    align-items: center; /* Centraliza o conteúdo na horizontal */
+    width: 100%;
+    align-items: center;
   }
-}
 
   .logo {
     margin: 5px 0;
@@ -86,24 +80,16 @@ footer {
 
   nav ul {
     display: flex;
-    align-items: center; /* Centraliza verticalmente os itens */
-    justify-content: space-between; /* Distribui os itens uniformemente ao longo do eixo principal */
+    align-items: center;
+    justify-content: space-between;
   }
 
   .banner {
     height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 30px 10px;
   }
 
   .banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
     margin: 0;
   }
 
@@ -113,38 +99,9 @@ footer {
     padding: 5px;
     text-align: center;
   }
-
-  .desktop-text {
-    display: none;
-  }
-
-  .mobile-text {
-    display: inline;
-  }
-
-  /* Estilos para o menu responsivo */
-  .nav {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
-
-
-
-
-
-
-
-
-
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
+/* Estilos dos Cartões */
 .container {
   display: flex;
   flex-wrap: wrap;
