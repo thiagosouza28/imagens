@@ -92,6 +92,7 @@
   width: 90%;
   height: 150px;
   object-fit: cover;
+  align-items: center;
 }
 
 .card-info {
