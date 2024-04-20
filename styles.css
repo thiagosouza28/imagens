@@ -18,6 +18,13 @@ header {
     align-items: center;
 }
 
+/* Adicione a regra viewport ao seu CSS */
+@viewport {
+  width: device-width;
+  initial-scale: 1;
+  zoom: 1;
+}
+
 .logo {
   width: 150px;
   margin-left: 20px;
@@ -145,4 +152,11 @@ footer {
   margin: 0;
   font-size: 16px;
   color: #008000;
+}
+
+/* Adicione a regra viewport ao seu CSS */
+@viewport {
+  width: device-width;
+  initial-scale: 1;
+  zoom: 1;
 }
