@@ -89,7 +89,7 @@
 }
 
 .card-img {
-  width: 90%;
+  width: 100%;
   height: 150px;
   object-fit: cover;
   align-items: center;
