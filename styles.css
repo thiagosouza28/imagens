@@ -71,10 +71,13 @@ footer {
 }
 
 /* Estilos para telas menores */
-@media only screen and (max-width: 768px) {
+@@media only screen and (max-width: 768px) {
   header {
     flex-direction: column;
+    width: 100%; /* Ajusta a largura para ocupar 100% da largura da tela */
+    align-items: center; /* Centraliza o conteúdo na horizontal */
   }
+}
 
   .logo {
     margin: 5px 0;
