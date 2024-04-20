@@ -1,12 +1,12 @@
-/* Estilos globais */
+/* Global Styles */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
 }
 
-/* Estilos do cabeçalho */
+/* Header Styles */
 header {
   background-color: #8b0000;
   color: #fff;
@@ -21,7 +21,7 @@ header {
   margin-left: 20px;
 }
 
-/* Estilos da navegação */
+/* Navigation Styles */
 nav ul {
   display: flex;
   margin-right: 20px;
@@ -37,7 +37,7 @@ nav a {
   padding: 10px;
 }
 
-/* Estilos do banner */
+/* Banner Styles */
 .banner {
   position: relative;
   height: 400px;
@@ -55,7 +55,7 @@ nav a {
   padding: 15px;
 }
 
-/* Estilos do rodapé */
+/* Footer Styles */
 footer {
   position: fixed;
   bottom: 0;
@@ -66,18 +66,13 @@ footer {
   padding: 5px 0;
 }
 
-.mobile-text {
-  display: none;
-}
-
-/* Estilos para telas menores */
+/* Responsive Styles (Media Queries) */
 @media only screen and (max-width: 768px) {
   header {
     flex-direction: column;
-    width: 100%; /* Ajusta a largura para ocupar 100% da largura da tela */
-    align-items: center; /* Centraliza o conteúdo na horizontal */
+    width: 100%; /* Adjusts to full width */
+    align-items: center; /* Center content horizontally */
   }
-}
 
   .logo {
     margin: 5px 0;
@@ -85,9 +80,9 @@ footer {
   }
 
   nav ul {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente os itens */
-    justify-content: space-between; /* Distribui os itens uniformemente ao longo do eixo principal */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Distribute evenly */
   }
 
   .banner {
@@ -96,8 +91,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 10px; /* Adjust margins for smaller screens */
   }
 
   .banner img {
@@ -108,63 +102,39 @@ footer {
   }
 
   footer {
-    position: fixed;
-    width: 100%;
-    padding: 5px;
-    text-align: center;
+    padding: 5px; /* Consistent padding for mobile */
   }
 
   .desktop-text {
-    display: none;
+    display: none; /* Hide desktop-specific text */
   }
 
   .mobile-text {
-    display: inline;
-  }
-
-  /* Estilos para o menu responsivo */
-  .nav {
-    flex-direction: column;
-    align-items: center;
+    display: inline; /* Show mobile-specific text */
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
+/* Card Styles */
 .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap; /* Allow cards to wrap to next line */
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Spacing between cards */
   padding: 20px;
 }
 
 .card {
-  width: 250px;
+  width: 250px; /* Adjust card width as needed */
   background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Prevent content overflow */
 }
 
 .card-img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 150px; /* Adjust image height as needed */
+  object-fit: cover; /* Crop image to fit container */
 }
 
 .card-info {
@@ -177,13 +147,3 @@ body {
   font-size: 14px;
 }
 
-.card-name {
-  margin: 5px 0 10px;
-  font-size: 18px;
-}
-
-.card-value {
-  margin: 0;
-  font-size: 16px;
-  color: #008000;
-}
