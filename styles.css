@@ -13,7 +13,9 @@ header {
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 .logo {
