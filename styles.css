@@ -44,7 +44,7 @@ nav a:hover {
 /* Estilos do Banner */
 .banner {
   position: relative;
-  height: 150px;
+  width: 150px;
   overflow: hidden;
 }
 
