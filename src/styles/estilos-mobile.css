@@ -44,14 +44,16 @@
 /* Estilos do Banner */
 .banner {
   width: 350px;
+  height: 350px; /* Manter a altura fixa */
   overflow: hidden;
 }
 
 .banner img {
   width: 100%;
-  height: auto; /* Define a altura automaticamente para manter a proporção da imagem */
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover; /* Ajustar a imagem para cobrir o banner */
 }
+
 
 }
 /* Estilos dos Cartões */
