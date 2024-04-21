@@ -86,5 +86,9 @@ xhttp.onreadystatechange = function () {
   }
 };
 
-xhttp.open("GET", "/src/controller/buscar_servicos.php", true);
+xhttp.open(
+  "GET",
+  "https://github.com/thiagosouza28/moura-grafica/blob/main/src/controller/buscar_servicos.php",
+  true
+);
 xhttp.send();
