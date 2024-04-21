@@ -77,39 +77,7 @@
       </div>
     </footer>
 
-    <script>
-      // Função para fazer uma requisição AJAX e carregar os serviços
-      function loadServices() {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "load_services.php", true);
-        xhr.onload = function () {
-          if (xhr.status >= 200 && xhr.status < 300) {
-            var services = JSON.parse(xhr.responseText);
-            var container = document.getElementById("services-container");
-            services.forEach(function (service) {
-              var card = `
-                <div class="service">
-                  <img src="${service.image}" alt="${service.description}">
-                  <h2>${service.description}</h2>
-                  <p>R$ ${service.value} (${service.unit})</p>
-                </div>
-              `;
-              container.innerHTML += card;
-            });
-          } else {
-            console.error(
-              "Erro ao carregar serviços. Status da requisição:",
-              xhr.status
-            );
-          }
-        };
-        xhr.send();
-      }
-
-      // Chama a função para carregar os serviços quando a página carregar
-      window.onload = function () {
-        loadServices();
-      };
-    </script>
+    <!-- Carregue o script externo aqui -->
+    <script src="/script.js"></script>
   </body>
 </html>
