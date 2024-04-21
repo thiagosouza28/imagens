@@ -111,13 +111,16 @@
     background-color: #8b0000;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0; /* Aumentar o espaçamento interno */
     width: 100%;
   }
 
   .footer-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Distribuir os elementos igualmente */
+    align-items: center; /* Alinhar verticalmente */
+    max-width: 1200px; /* Limitar a largura do conteúdo do rodapé */
+    margin: 0 auto; /* Centralizar horizontalmente */
   }
 
   .footer-info,
@@ -128,6 +131,7 @@
 
   .footer-info {
     max-width: 300px;
+    margin-right: 20px; /* Adicionar espaçamento entre os elementos */
   }
 
   .social-media ul {
@@ -135,10 +139,11 @@
     padding: 0;
     display: flex;
     justify-content: center;
+    margin: 0; /* Remover margem padrão */
   }
 
   .social-media ul li {
-    margin: 0 10px;
+    margin: 0 10px; /* Espaçamento entre os ícones sociais */
   }
 
   .social-media ul li a {
