@@ -43,19 +43,16 @@
 
 /* Estilos do Banner */
 .banner {
-  width: 90%;
-  height: 720px; /* Manter a altura fixa */
+  width: 100%;
   overflow: hidden;
 }
 
 .banner img {
   width: 100%;
   height: auto;
-  padding: 10px;
-  text-align: center;
-  align-items: center;
-  object-fit: cover; /* Ajustar a imagem para cobrir o banner */
+  object-fit: cover;
 }
+
 
 
 }
