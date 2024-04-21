@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moura Gráfica</title>
   <link rel="icon" href="../img/moura-logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="/src/styles/estilos-mobile.css" media="screen and (max-width: 767px)">
@@ -29,48 +29,41 @@
   </header>
 
   <div class="container">
-    <!-- Card 1 -->
-    <div class="card">
-      <img src="../img/03.jpg" alt="Imagem 1" class="card-img">
-      <div class="card-info">
-        <p class="card-code">001</p>
-        <h2 class="card-name">Adesivos Personalizados</h2>
-        <p class="card-value">R$ 95,00 M²</p>
-      </div>
-    </div>
+    <!-- PHP para carregar os serviços do banco de dados -->
+    <?php
+    // Conectar ao banco de dados
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "db-moura";
 
-    <!-- Card 2 -->
-    <div class="card">
-      <img src="../img/04.png" alt="Imagem 2" class="card-img">
-      <div class="card-info">
-        <p class="card-code">002</p>
-        <h2 class="card-name">Banner Personalizados</h2>
-        <p class="card-value">R$ 95,00 M²</p>
-      </div>
-    </div>
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-    
-    <!-- Card 3 -->
-    <div class="card">
-      <img src="../img/04.png" alt="Imagem 2" class="card-img">
-      <div class="card-info">
-        <p class="card-code">003</p>
-        <h2 class="card-name">Placa em PVC</h2>
-        <p class="card-value">R$ 95,00 M²</p>
-      </div>
-    </div>
+    // Verificar conexão
+    if ($conn->connect_error) {
+        die("Conexão falhou: " . $conn->connect_error);
+    }
 
-    
-    <!-- Card 4 -->
-    <div class="card">
-      <img src="../img/04.png" alt="Imagem 2" class="card-img">
-      <div class="card-info">
-        <p class="card-code">004</p>
-        <h2 class="card-name">Faixa Banner</h2>
-        <p class="card-value">R$ 95,00 M²</p>
-      </div>
-    </div>
+    // Query para selecionar os serviços do banco de dados
+    $sql = "SELECT * FROM services";
+    $result = $conn->query($sql);
 
+    // Exibir os serviços na página
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "<div class='card'>";
+            echo "<img src='" . $row['image'] . "' alt='Imagem " . $row['card-code'] . "' class='card-img'>";
+            echo "<div class='card-info'>";
+            echo "<p class='card-code'>" . $row['card-code'] . "</p>";
+            echo "<h2 class='card-name'>" . $row['description'] . "</h2>";
+            echo "<p class='card-value'>R$ " . $row['value'] . " " . $row['unit'] . "</p>";
+            echo "</div></div>";
+        }
+    } else {
+        echo "Nenhum serviço encontrado.";
+    }
+    $conn->close();
+    ?>
   </div>
 
   <footer>
