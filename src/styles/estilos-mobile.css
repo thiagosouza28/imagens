@@ -51,6 +51,7 @@
 .banner img {
   width: 100%;
   height: auto;
+  padding: 10px;
   object-fit: contain; /* Ajuste a imagem para caber dentro do banner sem cortar */
 }
 
