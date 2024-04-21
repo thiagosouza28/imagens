@@ -64,31 +64,40 @@ function imageExists(url, callback) {
   img.src = url;
 }
 
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function () {
-  if (this.readyState == 4 && this.status == 200) {
-    var services = JSON.parse(this.responseText);
-    var cardsContainer = document.getElementById("cards-container");
-
-    services.forEach(function (service) {
-      var card = `
-          <div class='card'>
-            <img src='${service.image}' alt='Imagem ${service.card_code}' class='card-img'>
-            <div class='card-info'>
-              <p class='card-code'>${service.card_code}</p>
-              <h2 class='card-name'>${service.description}</h2>
-              <p class='card-value'>R$ ${service.value} ${service.unit}</p>
+// Função para fazer uma requisição AJAX e carregar os serviços
+function loadServices() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "load_services.php", true);
+  xhr.onload = function () {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      var services = JSON.parse(xhr.responseText);
+      var container = document.getElementById("services-container");
+      if (services.length === 0) {
+        container.innerHTML =
+          "<p>Não há produtos ou serviços cadastrados no sistema.</p>";
+      } else {
+        services.forEach(function (service) {
+          var card = `
+            <div class="service">
+              <img src="${service.image}" alt="${service.description}">
+              <h2>${service.description}</h2>
+              <p>R$ ${service.value} (${service.unit})</p>
             </div>
-          </div>
-        `;
-      cardsContainer.innerHTML += card;
-    });
-  }
-};
+          `;
+          container.innerHTML += card;
+        });
+      }
+    } else {
+      console.error(
+        "Erro ao carregar serviços. Status da requisição:",
+        xhr.status
+      );
+    }
+  };
+  xhr.send();
+}
 
-xhttp.open(
-  "GET",
-  "https://github.com/thiagosouza28/moura-grafica/blob/main/src/controller/buscar_servicos.php",
-  true
-);
-xhttp.send();
+// Chama a função para carregar os serviços quando a página carregar
+window.onload = function () {
+  loadServices();
+};
