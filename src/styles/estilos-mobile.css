@@ -141,6 +141,7 @@ footer {
 .social-media ul li a {
   color: #fff;
   font-size: 20px;
+  text-decoration: none;
 }
 
 .social-media ul li a:hover {
