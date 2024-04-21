@@ -52,6 +52,7 @@
   width: 300px;
   height: auto;
   padding: 10px;
+  text-align: center;
   align-items: center;
   object-fit: cover; /* Ajustar a imagem para cobrir o banner */
 }
