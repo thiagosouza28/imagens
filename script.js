@@ -49,55 +49,15 @@ function startImageSlideshow() {
   }, 3000);
 }
 
-// Chamar a função para carregar as imagens do diretório
-loadImagesFromDirectory();
+// script.js
 
-// Função para verificar se uma imagem existe
-function imageExists(url, callback) {
-  const img = new Image();
-  img.onload = function () {
-    callback(true);
-  };
-  img.onerror = function () {
-    callback(false);
-  };
-  img.src = url;
-}
+// Espera até que o DOM esteja completamente carregado
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleciona todos os elementos h2
+  var headings = document.querySelectorAll("h2");
 
-// Função para fazer uma requisição AJAX e carregar os serviços
-function loadServices() {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "load_services.php", true);
-  xhr.onload = function () {
-    if (xhr.status >= 200 && xhr.status < 300) {
-      var services = JSON.parse(xhr.responseText);
-      var container = document.getElementById("services-container");
-      if (services.length === 0) {
-        container.innerHTML =
-          "<p>Não há produtos ou serviços cadastrados no sistema.</p>";
-      } else {
-        services.forEach(function (service) {
-          var card = `
-            <div class="service">
-              <img src="${service.image}" alt="${service.description}">
-              <h2>${service.description}</h2>
-              <p>R$ ${service.value} (${service.unit})</p>
-            </div>
-          `;
-          container.innerHTML += card;
-        });
-      }
-    } else {
-      console.error(
-        "Erro ao carregar serviços. Status da requisição:",
-        xhr.status
-      );
-    }
-  };
-  xhr.send();
-}
-
-// Chama a função para carregar os serviços quando a página carregar
-window.onload = function () {
-  loadServices();
-};
+  // Itera sobre os elementos e adiciona uma classe CSS
+  for (var i = 0; i < headings.length; i++) {
+    headings[i].classList.add("heading-style");
+  }
+});
