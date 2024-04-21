@@ -43,13 +43,13 @@
 
 /* Estilos do Banner */
 .banner {
-  width: 350px;
+  width: 90%;
   height: 720px; /* Manter a altura fixa */
   overflow: hidden;
 }
 
 .banner img {
-  width: 330px;
+  width: 80%;
   height: auto;
   padding: 10px;
   text-align: center;
