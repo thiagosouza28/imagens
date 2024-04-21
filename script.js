@@ -1,5 +1,5 @@
 const bannerSection = document.querySelector(".banner");
-const directoryUrl = "https://moura-grafica.vercel.app/img/"; // URL do diretório das imagens
+const directoryUrl = "https://moura-grafica-nine.vercel.app/img/"; // URL do diretório das imagens
 let images = []; // Array para armazenar as URLs das imagens
 let currentIndex = 0; // Índice da imagem atual
 
