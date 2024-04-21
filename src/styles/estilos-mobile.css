@@ -53,6 +53,7 @@
     height: 100%;
     object-fit: cover;
   }
+
 }
 
 /* Estilos dos Cartões */
@@ -110,7 +111,9 @@
 footer {
   background-color: #8b0000;
   color: #fff;
-  padding: 20px 0;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
 }
 
 .footer-container {
