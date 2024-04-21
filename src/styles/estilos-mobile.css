@@ -41,18 +41,17 @@
     color: #ccc;
   }
 
-  /* Estilos do Banner */
-  .banner {
-    width: 350px;
-    height: 350px; /* Ajustar a altura do banner para telas menores */
-    overflow: hidden;
-  }
+/* Estilos do Banner */
+.banner {
+  width: 350px;
+  overflow: hidden;
+}
 
-  .banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.banner img {
+  width: 100%;
+  height: auto; /* Define a altura automaticamente para manter a proporção da imagem */
+  object-fit: cover;
+}
 
 }
 /* Estilos dos Cartões */
