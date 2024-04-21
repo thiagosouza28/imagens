@@ -56,10 +56,39 @@
   }
   
   /* Estilos do Rodapé */
-  footer {
-    background-color: #8b0000;
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .footer-info,
+  .social-media {
+    flex: 1;
+  }
+  
+  .footer-info {
+    max-width: 300px;
+  }
+  
+  .social-media ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-media ul li {
+    margin: 0 10px;
+  }
+  
+  .social-media ul li a {
     color: #fff;
-    text-align: center;
-    padding: 10px 0;
+    font-size: 24px;
+  }
+  
+  .social-media ul li a:hover {
+    color: #ccc;
   }
 }
