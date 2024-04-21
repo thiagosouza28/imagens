@@ -52,6 +52,7 @@
   width: 90%;
   height: auto;
   padding: 10px;
+  align-items: center;
   object-fit: contain; /* Ajuste a imagem para caber dentro do banner sem cortar */
 }
 
