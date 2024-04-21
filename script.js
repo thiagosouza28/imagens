@@ -63,3 +63,28 @@ function imageExists(url, callback) {
   };
   img.src = url;
 }
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    var services = JSON.parse(this.responseText);
+    var cardsContainer = document.getElementById("cards-container");
+
+    services.forEach(function (service) {
+      var card = `
+          <div class='card'>
+            <img src='${service.image}' alt='Imagem ${service.card_code}' class='card-img'>
+            <div class='card-info'>
+              <p class='card-code'>${service.card_code}</p>
+              <h2 class='card-name'>${service.description}</h2>
+              <p class='card-value'>R$ ${service.value} ${service.unit}</p>
+            </div>
+          </div>
+        `;
+      cardsContainer.innerHTML += card;
+    });
+  }
+};
+
+xhttp.open("GET", "/src/controller/buscar_servicos.php", true);
+xhttp.send();
