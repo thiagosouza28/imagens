@@ -44,7 +44,7 @@
 /* Estilos do Banner */
 .banner {
   width: 350px;
-  height: 350px; /* Manter a altura fixa */
+  height: 720px; /* Manter a altura fixa */
   overflow: hidden;
 }
 
