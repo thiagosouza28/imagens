@@ -53,15 +53,6 @@
     height: 100%;
     object-fit: cover;
   }
-
-  /* Estilos do Rodapé */
-  footer {
-    background-color: #8b0000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-  }
 }
 
 /* Estilos dos Cartões */
@@ -117,7 +108,7 @@
 /* Estilos para dispositivos móveis */
 
 footer {
-  background-color: #333;
+  background-color: #8b0000;
   color: #fff;
   padding: 20px 0;
 }
