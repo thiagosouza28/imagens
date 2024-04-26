@@ -1,13 +1,21 @@
 /* Media query para dispositivos com largura mínima de 786px (desktop) */
 @media only screen and (min-width: 786px) {
-  /* Estilos para o cabeçalho */
   .header {
     background-color: #000000;
     color: #fff;
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centraliza verticalmente */
+    /* Alinha logo à esquerda e links à direita */
+    align-items: center;
+    /* Centraliza verticalmente */
+
+  }
+
+  .nav {
+
+    margin: 20px;
+
   }
 
   .logo {
@@ -15,58 +23,80 @@
     margin: 20px;
   }
 
-  .nav {
-    margin: 20px;
-  }
-
   .nav-links {
+    list-style: none;
+    margin: 15px;
     display: flex;
-    list-style: none; /* Remover as bolinhas da lista */
+
   }
 
   .nav a {
     text-decoration: none;
     color: #fff;
     margin-left: 30px;
+    /* Adiciona espaçamento entre os itens da navegação */
   }
 
   .nav a:first-child {
     margin-left: 0;
+    /* Remove a margem do primeiro link */
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    /* Espaçamento igual nas laterais */
+    align-items: center;
+    /* Centraliza verticalmente os itens */
+    list-style: none;
+    /* Remover as bolinhas da lista */
+    width: 100%;
   }
 
   .nav a:hover {
     text-decoration: underline;
+    /* Adiciona decoração de sublinhado ao passar o mouse */
   }
 
-  /* Estilos para banners */
-  .banner,
-  .banner-2 {
+
+  .banner {
     text-align: center;
     background-color: #000000;
     padding: 20px;
+    align-items: center;
+
     color: #fff;
-    margin-bottom: 20px;
+
   }
 
+  
   .banner-2 {
+    text-align: center;
+    background-color: #000000;
     padding: 50px;
+    align-items: center;
+
+    color: #fff;
+
   }
+
 
   .banner img {
     width: 250px;
   }
 
-  /* Estilos para o rodapé */
   .footer {
     background-color: #000000;
     color: #fff;
     padding: 20px 10px;
     text-align: center;
+
+
   }
 
   .footer-container {
-    display: flex;
     flex-direction: column;
+    display: flex;
     justify-content: space-between;
   }
 
@@ -78,12 +108,13 @@
     margin-bottom: 10px;
   }
 
-  /* Estilos para redes sociais no rodapé */
   .social-media ul {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Centraliza verticalmente */
+
   }
 
   .social-media li {
@@ -93,7 +124,7 @@
   .social-media a {
     color: #fff;
     text-decoration: none;
-    text-align: center;
+    text-align: center
   }
 
   /* Estilos para o layout de cartões */
@@ -121,9 +152,10 @@
 
   .card-image {
     width: 100%;
-    height: 200px;
+    height: 100px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
+    align-items: center;
   }
 
   .card:hover .card-image {
@@ -146,7 +178,6 @@
     color: #007bff;
   }
 
-  /* Estilos para o botão de contato */
   .contact-btn {
     display: block;
     width: 100%;
