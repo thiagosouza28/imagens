@@ -54,6 +54,7 @@
     text-align: center;
     display: flex;
     padding: 20px 0;
+    align-items: center;
   }
 
   .banner img {
