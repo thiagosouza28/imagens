@@ -90,6 +90,10 @@
     
   }
 
+  .social-media li {
+    padding: 10px;
+  }
+
   .social-media a {
     color: #fff;
     text-decoration: none;
