@@ -8,7 +8,7 @@
   .logo {
     width: 100px;
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+
     text-align: center;
     align-items: center;
   }
