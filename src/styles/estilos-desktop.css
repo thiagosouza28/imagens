@@ -5,6 +5,9 @@
     color: #fff;
     padding: 10px;
     display: flex;
+    justify-content: space-between; /* Alinha logo à esquerda e links à direita */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 30px;
   }
 
   .nav {
