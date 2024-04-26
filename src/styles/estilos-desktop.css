@@ -60,6 +60,10 @@
 
   }
 
+  .banner h1 h3 p{
+    color: #fff;
+  }
+
   .banner img {
     width: 250px;
   }
