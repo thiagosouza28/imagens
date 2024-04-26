@@ -1,5 +1,5 @@
-const bannerSection = document.querySelector(".banner");
-const directoryUrl = "https://moura-grafica-nine.vercel.app/img/"; // URL do diretório das imagens
+const bannerSection = document.querySelector(".card-container");
+const directoryUrl = "https://moura-grafica.vercel.app/img/"; // URL do diretório das imagens
 let images = []; // Array para armazenar as URLs das imagens
 let currentIndex = 0; // Índice da imagem atual
 
@@ -25,39 +25,36 @@ function loadImagesFromDirectory() {
   }
 }
 
-// Função para exibir a próxima imagem na seção de banner
-function displayNextImage() {
-  const imgElement = document.createElement("img");
-  imgElement.src = images[currentIndex];
-  imgElement.alt = "Banner";
-  bannerSection.innerHTML = ""; // Limpar o conteúdo anterior
-  bannerSection.appendChild(imgElement);
+// script.js
 
-  currentIndex = (currentIndex + 1) % images.length;
-}
+const cards = document.querySelectorAll(".card");
 
-// Função para iniciar o slideshow de imagens
-function startImageSlideshow() {
-  // Exibir a última imagem imediatamente
-  currentIndex = images.length - 1;
-  displayNextImage();
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.style.transform = "scale(1.05)";
+    card.querySelector(".card-image").style.transform = "scale(1.2)";
+  });
 
-  // Configurar intervalo para exibir imagens subsequentes a cada 3 segundos
-  setInterval(function () {
-    // Exibir a próxima imagem
-    displayNextImage();
-  }, 3000);
-}
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "scale(1)";
+    card.querySelector(".card-image").style.transform = "scale(1)";
+  });
+});
 
 // script.js
 
-// Espera até que o DOM esteja completamente carregado
 document.addEventListener("DOMContentLoaded", function () {
-  // Seleciona todos os elementos h2
-  var headings = document.querySelectorAll("h2");
+  const contactButtons = document.querySelectorAll(".contact-btn");
 
-  // Itera sobre os elementos e adiciona uma classe CSS
-  for (var i = 0; i < headings.length; i++) {
-    headings[i].classList.add("heading-style");
-  }
+  contactButtons.forEach((button) => {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      const serviceName = this.getAttribute("data-service");
+      const message = encodeURIComponent(
+        `Olá! Estou interessado no serviço ${serviceName}.`
+      );
+      const whatsappURL = `https://wa.me/5591992895453?text=${message}`;
+      window.open(whatsappURL, "_blank");
+    });
+  });
 });
