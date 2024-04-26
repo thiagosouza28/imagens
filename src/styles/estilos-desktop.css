@@ -1,7 +1,7 @@
 /* Media query para dispositivos com largura mínima de 786px (desktop) */
 @media only screen and (min-width: 786px) {
   .header {
-    background-color: #000000;
+    background: linear-gradient(266deg, rgba(36,0,0,1) 0%, rgba(121,9,9,1) 35%, rgba(255,0,0,1) 100%);
     color: #fff;
     padding: 10px;
     display: flex;
