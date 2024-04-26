@@ -5,15 +5,17 @@
     color: #fff;
     padding: 10px;
     display: flex;
-    justify-content: space-between; /* Alinha logo à esquerda e links à direita */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between;
+    /* Alinha logo à esquerda e links à direita */
+    align-items: center;
+    /* Centraliza verticalmente */
 
   }
 
   .nav {
-    
+
     margin: 20px;
-    
+
   }
 
   .logo {
@@ -23,7 +25,7 @@
 
   .nav-links {
     list-style: none;
-    margin:15px;
+    margin: 15px;
     display: flex;
 
   }
@@ -31,46 +33,56 @@
   .nav a {
     text-decoration: none;
     color: #fff;
-    margin-left: 30px; /* Adiciona espaçamento entre os itens da navegação */
+    margin-left: 30px;
+    /* Adiciona espaçamento entre os itens da navegação */
   }
 
   .nav a:first-child {
-    margin-left: 0; /* Remove a margem do primeiro link */
+    margin-left: 0;
+    /* Remove a margem do primeiro link */
   }
 
   .nav-links {
     display: flex;
-    justify-content: space-between; /* Espaçamento igual nas laterais */
-    align-items: center; /* Centraliza verticalmente os itens */
-    list-style: none; /* Remover as bolinhas da lista */
+    justify-content: space-between;
+    /* Espaçamento igual nas laterais */
+    align-items: center;
+    /* Centraliza verticalmente os itens */
+    list-style: none;
+    /* Remover as bolinhas da lista */
     width: 100%;
   }
 
   .nav a:hover {
-    text-decoration: underline; /* Adiciona decoração de sublinhado ao passar o mouse */
+    text-decoration: underline;
+    /* Adiciona decoração de sublinhado ao passar o mouse */
   }
 
-  
+
   .banner {
     text-align: center;
     background-color: #000000;
     padding: 20px;
     align-items: center;
-    display: flex;
+
     color: #fff;
 
   }
 
-  .banner h1 h3 p{
+  
+  .banner-2 {
+    text-align: center;
+    background-color: #000000;
+    padding: 20px;
+    align-items: center;
+
     color: #fff;
+
   }
+
 
   .banner img {
     width: 250px;
-  }
-
-  .banner p{
-
   }
 
   .footer {
@@ -78,8 +90,8 @@
     color: #fff;
     padding: 20px 10px;
     text-align: center;
-    
-    
+
+
   }
 
   .footer-container {
@@ -100,8 +112,9 @@
     list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centraliza verticalmente */
-    
+    align-items: center;
+    /* Centraliza verticalmente */
+
   }
 
   .social-media li {
