@@ -11,9 +11,10 @@
   }
 
   .nav {
-    display: flex;
-    justify-content: space-between; /* Alinha logo à esquerda e links à direita */
-    align-items: center; /* Centraliza verticalmente */
+    background-color: #271112;
+    width: 100vw;
+    height: 110px;
+    opacity: 0.7;
   }
 
   .logo {
