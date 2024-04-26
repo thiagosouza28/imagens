@@ -45,8 +45,25 @@
 
   .banner {
     text-align: center;
-    padding: 20px 0;
+    background-color: #ffffff;
+    padding: 20px;
+    align-items: center;
+
+    color: #000000;
+
   }
+
+  
+  .banner-2 {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 50px;
+    align-items: center;
+
+    color: #000000;
+
+  }
+
 
   .banner img {
     width: 250px;
