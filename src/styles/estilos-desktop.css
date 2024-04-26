@@ -53,10 +53,11 @@
   
   .banner {
     text-align: center;
+    background-color: #000000;
     padding: 20px;
     align-items: center;
     display: flex;
-    
+
   }
 
   .banner img {
