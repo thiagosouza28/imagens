@@ -23,7 +23,7 @@
 
   .nav-links {
     list-style: none;
-    margin: 0;
+    margin:15px;
     display: flex;
     padding: 15px;
   }
@@ -42,7 +42,6 @@
     display: flex;
     justify-content: space-between; /* Espaçamento igual nas laterais */
     align-items: center; /* Centraliza verticalmente os itens */
-    padding-left: 0;
     list-style: none; /* Remover as bolinhas da lista */
     width: 100%;
   }
