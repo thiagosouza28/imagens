@@ -82,6 +82,7 @@
 
   .social-media ul {
     list-style: none;
+    display: flex;
   }
 
   .social-media a {
