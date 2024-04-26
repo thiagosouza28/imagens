@@ -8,8 +8,9 @@
   .logo {
     width: 300px;
     display: flex;
-    align-items: center;
-
+    
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
   }
 
 
