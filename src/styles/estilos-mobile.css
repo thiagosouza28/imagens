@@ -5,10 +5,12 @@
     padding: 10px;
   }
 
-  .logo img {
-    width: 50px;
+  .logo {
+    width: 100px;
     display: flex;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center;
+    align-items: center;
   }
 
 
