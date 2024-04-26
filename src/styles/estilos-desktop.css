@@ -1,30 +1,153 @@
-/* estilos-desktop.css */
+/* Media query para dispositivos com largura mínima de 786px (desktop) */
+@media only screen and (min-width: 786px) {
+  .header {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+  }
 
-/* Estilos para o cabeçalho */
-.nav-links li a {
-  font-size: 18px;
-}
+  .logo {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
 
-/* Estilos para o banner */
-.banner {
-  background-image: url("/img/01.png");
-  height: 400px;
-}
+  .logo img {
+    width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
+    display: block; /* Para garantir que a margem automática funcione corretamente */
+  }
 
-/* Estilos para o rodapé */
-.footer-info,
-.social-media {
-  width: auto;
-}
+  .nav {
+    display: flex; /* Alinha os itens da navegação horizontalmente */
+    margin-top: 10px; /* Espaçamento acima da navegação */
+    padding: 30px;
+  }
 
-.footer-info {
-  text-align: center;
-}
+  .nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px; /* Adiciona espaçamento entre os itens da navegação */
+  }
 
-.social-media {
-  text-align: center;
-}
+  .nav-links {
+    display: flex;
+    justify-content: space-between; /* Espaçamento igual nas laterais */
+    align-items: center; /* Centraliza verticalmente os itens */
+    margin-top: 10px;
+    padding-left: 0;
+    list-style: none; /* Remover as bolinhas da lista */
+    width: 100%;
+  }
 
-.social-media ul li {
-  display: inline;
+  .nav a:hover {
+    text-decoration: underline; /* Adiciona decoração de sublinhado ao passar o mouse */
+  }
+
+  .banner {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .banner img {
+    width: 250px;
+  }
+
+  .footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer h3 {
+    font-size: 18px;
+  }
+
+  footer p {
+    margin-bottom: 10px;
+  }
+
+  .social-media ul {
+    list-style: none;
+  }
+
+  .social-media a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Estilos para o layout de cartões */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+  }
+
+  .card {
+    width: 300px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    align-items: center;
+  }
+
+  .card:hover .card-image {
+    transform: scale(1.1);
+  }
+
+  .card-info {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1.4em;
+    margin: 0;
+    color: #333;
+  }
+
+  .card-price {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #007bff;
+  }
+
+  .contact-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .contact-btn:hover {
+    background-color: #0056b3;
+  }
 }
