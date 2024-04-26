@@ -31,7 +31,7 @@
   .nav a {
     text-decoration: none;
     color: #fff;
-    margin-left: 20px; /* Adiciona espaçamento entre os itens da navegação */
+    margin-left: 30px; /* Adiciona espaçamento entre os itens da navegação */
   }
 
   .nav a:first-child {
