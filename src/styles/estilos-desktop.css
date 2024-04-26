@@ -55,6 +55,8 @@
     text-align: center;
     padding: 20px;
     align-items: center;
+    display: flex;
+    
   }
 
   .banner img {
