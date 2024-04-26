@@ -6,28 +6,33 @@
     padding: 10px;
   }
 
+  .nav {
+    display: flex;
+    justify-content: space-between; /* Alinha logo à esquerda e links à direita */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 30px;
+  }
+
   .logo {
     width: 300px;
+  }
+
+  .nav-links {
     display: flex;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  .logo img {
-    width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
-    display: block; /* Para garantir que a margem automática funcione corretamente */
-  }
-
-  .nav {
-    display: flex; /* Alinha os itens da navegação horizontalmente */
-    margin-top: 10px; /* Espaçamento acima da navegação */
-    padding: 30px;
+    justify-content: flex-end; /* Alinha os links à direita */
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   .nav a {
     text-decoration: none;
     color: #fff;
-    margin: 0 10px; /* Adiciona espaçamento entre os itens da navegação */
+    margin-left: 20px; /* Adiciona espaçamento entre os itens da navegação */
+  }
+
+  .nav a:first-child {
+    margin-left: 0; /* Remove a margem do primeiro link */
   }
 
   .nav-links {
