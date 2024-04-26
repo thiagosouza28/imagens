@@ -9,7 +9,8 @@
     width: 300px;
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    
+    margin-top: 20px;
   }
 
   .logo img {
