@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between; /* Alinha logo à esquerda e links à direita */
     align-items: center; /* Centraliza verticalmente */
+    margin: 20px;
 
   }
 
@@ -83,12 +84,13 @@
   .social-media ul {
     list-style: none;
     display: flex;
-    text-align: center
+    
   }
 
   .social-media a {
     color: #fff;
     text-decoration: none;
+    text-align: center
   }
 
   /* Estilos para o layout de cartões */
