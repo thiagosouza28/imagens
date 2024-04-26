@@ -85,6 +85,8 @@
   .social-media ul {
     list-style: none;
     display: flex;
+    justify-content: space-between; /* Alinha logo à esquerda e links à direita */
+    align-items: center; /* Centraliza verticalmente */
     
   }
 
