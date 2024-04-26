@@ -8,14 +8,10 @@
   .logo {
     width: 300px;
     display: flex;
-
-
-  }
-
-  .logo img {
     align-items: center;
-    
+
   }
+
 
   .nav {
     display: flex; /* Alinha os itens da navegação horizontalmente */
