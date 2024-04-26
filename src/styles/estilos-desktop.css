@@ -7,17 +7,18 @@
     display: flex;
     justify-content: space-between; /* Alinha logo à esquerda e links à direita */
     align-items: center; /* Centraliza verticalmente */
-    margin: 20px;
 
   }
 
   .nav {
     background-color: #271112;
+    margin: 20px;
     
   }
 
   .logo {
     width: 150px;
+    margin: 20px;
   }
 
   .nav-links {
