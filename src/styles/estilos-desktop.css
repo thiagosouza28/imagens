@@ -14,6 +14,7 @@
     display: flex;
     justify-content: space-between; /* Alinha logo à esquerda e links à direita */
     align-items: center; /* Centraliza verticalmente */
+    margin: 15px;
   }
 
   .logo {
@@ -23,7 +24,6 @@
   .nav-links {
     list-style: none;
     margin: 0;
-    padding: 20px;
     display: flex;
   }
 
