@@ -9,13 +9,13 @@
     width: 300px;
     display: flex;
     align-items: center;
-    
-    margin-top: 20px;
+
   }
 
   .logo img {
     width: 1000px;
-    display: block; /* Para garantir que a margem automática funcione corretamente */
+    display: block;
+    margin-top: 20px;
   }
 
   .nav {
