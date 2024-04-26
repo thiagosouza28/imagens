@@ -18,13 +18,13 @@
   }
 
   .logo {
-    width: 300px;
+    width: 150px;
   }
 
   .nav-links {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
   }
 
