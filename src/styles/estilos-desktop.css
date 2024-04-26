@@ -18,10 +18,10 @@
   }
 
   .nav-links {
-    margin-left: auto; /* Empurra os links para a direita */
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
   }
 
   .nav a {
@@ -33,6 +33,7 @@
   .nav a:first-child {
     margin-left: 0; /* Remove a margem do primeiro link */
   }
+  
   .nav-links {
     display: flex;
     justify-content: space-between; /* Espaçamento igual nas laterais */
