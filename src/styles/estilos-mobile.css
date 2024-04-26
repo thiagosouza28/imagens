@@ -5,12 +5,10 @@
     padding: 10px;
   }
 
-  .logo {
+  .logo img {
     width: 300px;
     display: flex;
-    
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    text-align: center; /* Centraliza o texto dentro do contêiner */
   }
 
 
